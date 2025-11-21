@@ -1,0 +1,28 @@
+Classical Models Results - SVM + K-NN
+================================================================================
+
+4 Features:
+  Features: Packet Length Mean, Packet Length Std, Packet Length Variance, Average Packet Size
+  SVM:  F1=0.8580, Acc=0.8387, Time=6.46s
+  K-NN: F1=0.9232, Acc=0.9182, Time=0.03s
+
+6 Features:
+  Features: Destination Port, Bwd Packet Length Mean, Packet Length Mean, Packet Length Std, Packet Length Variance, Average Packet Size
+  SVM:  F1=0.9080, Acc=0.9032, Time=4.28s
+  K-NN: F1=0.9558, Acc=0.9563, Time=0.04s
+
+8 Features:
+  Features: Destination Port, Bwd Packet Length Max, Bwd Packet Length Mean, Max Packet Length, Packet Length Mean, Packet Length Std, Packet Length Variance, Average Packet Size
+  SVM:  F1=0.9079, Acc=0.9031, Time=4.41s
+  K-NN: F1=0.9673, Acc=0.9666, Time=0.04s
+
+12 Features:
+  Features: Destination Port, Total Length of Fwd Packets, Bwd Packet Length Max, Bwd Packet Length Mean, Max Packet Length, Packet Length Mean, Packet Length Std, Packet Length Variance, Average Packet Size, Subflow Fwd Bytes, Init_Win_bytes_forward, Init_Win_bytes_backward
+  SVM:  F1=0.9365, Acc=0.9337, Time=4.48s
+  K-NN: F1=0.9830, Acc=0.9828, Time=0.10s
+
+Overall:
+  K-NN wins: 4/4
+  SVM wins: 0/4
+  Best K-NN F1: 0.9830
+  Best SVM F1: 0.9365

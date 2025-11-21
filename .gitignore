@@ -1,0 +1,37 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+
+# Jupyter
+*.ipynb_checkpoints
+*.ipynb
+
+# Data files (large dataset)
+cicids2017_cleaned.csv
+
+# Archives and old files
+archive/
+
+# macOS
+.DS_Store
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Results (optional - uncomment if you don't want to track results)
+# */results/*.txt
+# */results/visualizations/*.png
+# circuits/*.png

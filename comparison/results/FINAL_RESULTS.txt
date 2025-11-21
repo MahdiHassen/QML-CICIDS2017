@@ -1,0 +1,60 @@
+================================================================================
+FINAL COMPARISON: Classical vs Quantum ML
+Network Intrusion Detection on CICIDS2017
+================================================================================
+
+Results Summary (6 Features/Qubits):
+--------------------------------------------------------------------------------
+Model                     F1-Score        Time            Type                
+--------------------------------------------------------------------------------
+Classical SVM             0.9080          3.26s           Classical           
+Classical K-NN            0.9648          0.09s           Classical           
+Hybrid Q-SVM              0.9111          62.00s          Hybrid              
+Hybrid Q-KNN              0.9642          28.50s          Hybrid              
+Full Quantum VQC          0.6019          547.30s         Full Quantum        
+
+================================================================================
+KEY FINDINGS:
+================================================================================
+
+🥇 WINNER: Classical K-NN
+   • F1-Score: 96.48%
+   • Training Time: 0.09s
+   • Best performance + fastest training!
+
+🥈 RUNNER-UP: Hybrid Q-KNN
+   • F1-Score: 96.42% (only 0.06% behind classical!)
+   • Training Time: 28.5s
+   • Shows quantum can compete with classical
+
+🥉 THIRD: Hybrid Q-SVM
+   • F1-Score: 91.11%
+   • Training Time: 62.0s
+   • Good quantum performance
+
+📊 CLASSICAL SVM:
+   • F1-Score: 90.80%
+   • Training Time: 3.26s
+   • Solid baseline
+
+⚠️ FULL QUANTUM VQC:
+   • F1-Score: 60.19%
+   • Training Time: 547.3s (9+ minutes!)
+   • Shows limitations of NISQ-era quantum ML
+
+--------------------------------------------------------------------------------
+CONCLUSIONS:
+--------------------------------------------------------------------------------
+
+1. Classical K-NN remains the best overall approach
+2. Hybrid quantum approaches (Q-SVM, Q-KNN) can compete with classical
+3. Q-KNN achieves 96.42% F1 - nearly matching classical K-NN!
+4. Full quantum VQC struggles in NISQ era (60% F1)
+5. Quantum shows promise but needs better hardware (fault-tolerant QC)
+
+================================================================================
+Dataset: CICIDS2017 (Network Intrusion Detection)
+Features: 6 (selected via mutual information)
+Samples: 33,776 (balanced 50/50 Normal/Attack)
+Metric: F1-Score (primary), Accuracy (secondary)
+================================================================================
