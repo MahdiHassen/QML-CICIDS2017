@@ -1,0 +1,54 @@
+COMPREHENSIVE COMPARISON: Classical vs Quantum Models
+================================================================================
+
+Dataset: CICIDS2017 Network Intrusion Detection
+Balanced samples: 33,776
+Feature selection: SelectKBest (mutual_info_classif)
+
+Quantum Circuit Architecture:
+  - 6 layers: RY encoding + multi-scale entanglement
+  - Feature interactions: RZ(π·x[i]·x[i+1])
+  - Entanglement patterns: linear chain + star + ring
+
+4 Features/Qubits:
+  Selected: Packet Length Mean, Packet Length Std, Packet Length Variance, Average Packet Size
+  Q-SVM:        F1=0.8573, Acc=0.8376, Time=46.67s
+  Q-KNN:        F1=0.9256, Acc=0.9289, Time=24.06s
+  Classical SVM: F1=0.8580, Acc=0.8387, Time=4.39s
+  Classical KNN: F1=0.9232, Acc=0.9182, Time=0.09s
+  Q-SVM advantage: -0.07%
+  Q-KNN advantage: +0.24%
+
+6 Features/Qubits:
+  Selected: Destination Port, Max Packet Length, Packet Length Mean, Packet Length Std, Packet Length Variance, Average Packet Size
+  Q-SVM:        F1=0.9102, Acc=0.9060, Time=77.10s
+  Q-KNN:        F1=0.9642, Acc=0.9634, Time=29.45s
+  Classical SVM: F1=0.9103, Acc=0.9061, Time=3.47s
+  Classical KNN: F1=0.9648, Acc=0.9640, Time=0.10s
+  Q-SVM advantage: -0.01%
+  Q-KNN advantage: -0.06%
+
+8 Features/Qubits:
+  Selected: Destination Port, Bwd Packet Length Mean, Max Packet Length, Packet Length Mean, Packet Length Std, Packet Length Variance, Average Packet Size, Init_Win_bytes_forward
+  Q-SVM:        F1=0.9230, Acc=0.9190, Time=88.72s
+  Q-KNN:        F1=0.9738, Acc=0.9736, Time=34.54s
+  Classical SVM: F1=0.9300, Acc=0.9272, Time=2.66s
+  Classical KNN: F1=0.9797, Acc=0.9794, Time=0.10s
+  Q-SVM advantage: -0.70%
+  Q-KNN advantage: -0.59%
+
+12 Features/Qubits:
+  Selected: Destination Port, Total Length of Fwd Packets, Bwd Packet Length Max, Bwd Packet Length Mean, Max Packet Length, Packet Length Mean, Packet Length Std, Packet Length Variance, Average Packet Size, Subflow Fwd Bytes, Init_Win_bytes_forward, Init_Win_bytes_backward
+  Q-SVM:        F1=0.9317, Acc=0.9289, Time=179.83s
+  Q-KNN:        F1=0.9703, Acc=0.9703, Time=66.24s
+  Classical SVM: F1=0.9365, Acc=0.9337, Time=2.74s
+  Classical KNN: F1=0.9830, Acc=0.9828, Time=0.13s
+  Q-SVM advantage: -0.48%
+  Q-KNN advantage: -1.27%
+
+Summary:
+  Best Q-SVM F1:        0.9317
+  Best Q-KNN F1:        0.9738
+  Best Classical SVM F1: 0.9365
+  Best Classical KNN F1: 0.9830
+  Overall Best:         Classical K-NN @ 12 features (0.9830)

@@ -1,0 +1,31 @@
+Quantum Models Results - Q-SVM + Q-KNN
+================================================================================
+
+Quantum Circuit Architecture:
+  - 6 layers: RY encoding + entanglement patterns
+  - Feature interactions: RZ(π·x[i]·x[i+1])
+  - Multi-scale entanglement: linear + star + ring
+
+4 Qubits:
+  Features: Packet Length Mean, Packet Length Std, Packet Length Variance, Average Packet Size
+  Q-SVM: F1=0.8573, Acc=0.8376, Time=49.15s
+  Q-KNN: F1=0.9256, Acc=0.9289, Time=23.59s
+
+6 Qubits:
+  Features: Destination Port, Bwd Packet Length Mean, Packet Length Mean, Packet Length Std, Packet Length Variance, Average Packet Size
+  Q-SVM: F1=0.9111, Acc=0.9064, Time=78.23s
+  Q-KNN: F1=0.9493, Acc=0.9498, Time=29.33s
+
+8 Qubits:
+  Features: Destination Port, Bwd Packet Length Mean, Max Packet Length, Packet Length Mean, Packet Length Std, Packet Length Variance, Average Packet Size, Subflow Fwd Bytes
+  Q-SVM: F1=0.9115, Acc=0.9069, Time=89.78s
+  Q-KNN: F1=0.9498, Acc=0.9503, Time=34.34s
+
+12 Qubits:
+  Features: Destination Port, Total Length of Fwd Packets, Bwd Packet Length Max, Bwd Packet Length Mean, Max Packet Length, Packet Length Mean, Packet Length Std, Packet Length Variance, Average Packet Size, Subflow Fwd Bytes, Init_Win_bytes_forward, Init_Win_bytes_backward
+  Q-SVM: F1=0.9317, Acc=0.9289, Time=175.95s
+  Q-KNN: F1=0.9703, Acc=0.9703, Time=64.82s
+
+Best Results:
+  Best Q-SVM F1: 0.9317
+  Best Q-KNN F1: 0.9703

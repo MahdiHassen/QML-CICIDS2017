@@ -1,0 +1,39 @@
+Quantum K-NN (Q-KNN) Comparison Results
+================================================================================
+
+Method:
+  - Quantum feature map: 6-layer deep circuit with entanglement
+  - Distance metric: d(x,y) = sqrt(1 - |<ψ(x)|ψ(y)>|²)
+  - K-neighbors: 5
+
+Results by Feature Count:
+--------------------------------------------------------------------------------
+
+4 Features:
+  Q-KNN:          F1=0.9256, Time=25.04s
+  Classical K-NN: F1=0.9232, Time=0.09s
+  Difference:     +0.0024 (+0.24%)
+
+6 Features:
+  Q-KNN:          F1=0.9642, Time=28.54s
+  Classical K-NN: F1=0.9648, Time=0.09s
+  Difference:     -0.0006 (-0.06%)
+
+8 Features:
+  Q-KNN:          F1=0.9738, Time=33.80s
+  Classical K-NN: F1=0.9797, Time=0.10s
+  Difference:     -0.0059 (-0.59%)
+
+12 Features:
+  Q-KNN:          F1=0.9703, Time=66.52s
+  Classical K-NN: F1=0.9830, Time=0.12s
+  Difference:     -0.0127 (-1.27%)
+
+
+Overall:
+  Q-KNN wins: 1/4
+  Classical wins: 3/4
+  Average Q-KNN F1: 0.9585
+  Average Classical F1: 0.9627
+  Average difference: -0.0042
+  Average slowdown: 367.1x

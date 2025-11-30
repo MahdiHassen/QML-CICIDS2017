@@ -3,22 +3,22 @@ Classical Models Results - SVM + K-NN
 
 4 Features:
   Features: Packet Length Mean, Packet Length Std, Packet Length Variance, Average Packet Size
-  SVM:  F1=0.8580, Acc=0.8387, Time=4.38s
-  K-NN: F1=0.9232, Acc=0.9182, Time=0.10s
+  SVM:  F1=0.8580, Acc=0.8387, Time=4.37s
+  K-NN: F1=0.9232, Acc=0.9182, Time=0.09s
 
 6 Features:
   Features: Destination Port, Bwd Packet Length Mean, Packet Length Mean, Packet Length Std, Packet Length Variance, Average Packet Size
-  SVM:  F1=0.9080, Acc=0.9032, Time=3.26s
+  SVM:  F1=0.9080, Acc=0.9032, Time=3.24s
   K-NN: F1=0.9558, Acc=0.9563, Time=0.10s
 
 8 Features:
   Features: Destination Port, Bwd Packet Length Mean, Max Packet Length, Packet Length Mean, Packet Length Std, Packet Length Variance, Average Packet Size, Init_Win_bytes_forward
-  SVM:  F1=0.9300, Acc=0.9272, Time=2.68s
+  SVM:  F1=0.9300, Acc=0.9272, Time=2.67s
   K-NN: F1=0.9797, Acc=0.9794, Time=0.10s
 
 12 Features:
   Features: Destination Port, Total Length of Fwd Packets, Fwd Packet Length Max, Bwd Packet Length Max, Bwd Packet Length Mean, Max Packet Length, Packet Length Mean, Packet Length Std, Packet Length Variance, Average Packet Size, Subflow Fwd Bytes, Init_Win_bytes_forward
-  SVM:  F1=0.9361, Acc=0.9334, Time=3.04s
+  SVM:  F1=0.9361, Acc=0.9334, Time=2.96s
   K-NN: F1=0.9812, Acc=0.9809, Time=0.11s
 
 Overall:

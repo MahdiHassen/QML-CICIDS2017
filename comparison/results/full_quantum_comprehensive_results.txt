@@ -1,0 +1,40 @@
+Full Quantum SVM Comprehensive Comparison
+================================================================================
+
+Models Compared:
+  1. Classical SVM (RBF kernel)
+  2. Classical K-NN (k=5)
+  3. Hybrid Q-SVM (quantum kernel + classical SVM)
+  4. Full Quantum VQC (variational quantum classifier)
+
+
+4 Features/Qubits:
+  Features: Packet Length Mean, Packet Length Std, Packet Length Variance, Average Packet Size
+  Classical SVM:  F1=0.8418, Time=0.01s
+  Classical K-NN: F1=0.9163, Time=0.00s
+  Hybrid Q-SVM:   F1=0.8446, Time=0.89s
+  Full Quantum:   F1=0.1176, Time=5.87s
+
+6 Features/Qubits:
+  Features: Destination Port, Bwd Packet Length Mean, Packet Length Mean, Packet Length Std, Packet Length Variance, Average Packet Size
+  Classical SVM:  F1=0.9004, Time=0.01s
+  Classical K-NN: F1=0.9313, Time=0.00s
+  Hybrid Q-SVM:   F1=0.9004, Time=1.20s
+  Full Quantum:   F1=0.3468, Time=12.34s
+
+8 Features/Qubits:
+  Features: Destination Port, Bwd Packet Length Max, Max Packet Length, Packet Length Mean, Packet Length Std, Packet Length Variance, Average Packet Size, Init_Win_bytes_forward
+  Classical SVM:  F1=0.9044, Time=0.01s
+  Classical K-NN: F1=0.9486, Time=0.01s
+  Hybrid Q-SVM:   F1=0.9044, Time=1.51s
+  Full Quantum:   F1=0.3860, Time=24.56s
+
+
+Key Findings:
+  Best Classical:     0.9486 F1
+  Best Hybrid:        0.9044 F1
+  Best Full Quantum:  0.3860 F1
+
+  Winner: Classical approaches dominate
+  Hybrid Q-SVM beats Full Quantum VQC in all cases
+  VQC struggles with optimization challenges

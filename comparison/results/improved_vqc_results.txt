@@ -1,0 +1,28 @@
+Improved Full Quantum VQC Results
+================================================================================
+
+Improvements Made:
+  • Deeper circuits (2 layers vs 1)
+  • Adam optimizer with momentum
+  • Learning rate decay
+  • Early stopping
+  • More epochs (60 vs 20)
+  • Better circuit ansatz (hardware-efficient)
+
+4 Qubits:
+  Improved VQC: F1=0.4364, Time=237.7s
+  Hybrid Q-SVM: F1=0.9270, Time=1.4s
+  Classical KNN: F1=0.9212
+
+6 Qubits:
+  Improved VQC: F1=0.6019, Time=547.3s
+  Hybrid Q-SVM: F1=0.9438, Time=2.7s
+  Classical KNN: F1=0.9766
+
+8 Qubits:
+  Improved VQC: F1=0.3704, Time=750.9s
+  Hybrid Q-SVM: F1=0.9465, Time=2.4s
+  Classical KNN: F1=0.9709
+
+Best Improved VQC: 0.6019 F1
+Improvement over old VQC: +21.2%

@@ -1,0 +1,39 @@
+Full Quantum SVM Results - Variational Quantum Classifier
+================================================================================
+
+Architecture:
+  Qubits: 4
+  Variational Layers: 1
+  Trainable Parameters: 8
+  Training Epochs: 15
+  Learning Rate: 0.15
+
+Dataset:
+  Total Samples: 1,688
+  Training Samples: 1,266
+  Test Samples: 422
+  Features: Packet Length Mean, Packet Length Std, Packet Length Variance, Average Packet Size
+
+Results:
+  Accuracy: 0.6540
+  F1-Score: 0.4823
+  Training Time: 8.38s
+  Prediction Time: 0.68s
+
+Comparison with Hybrid Approach:
+  Hybrid Q-SVM F1: 0.8674
+  Full Quantum F1: 0.4823
+  Difference: -38.51%
+
+Key Differences:
+  Full Quantum VQC:
+    ✓ Feature encoding in quantum circuit
+    ✓ Classification in quantum circuit
+    ✓ Parameters trained via gradient descent
+    ✓ Fully quantum except optimization loop
+
+  Hybrid Q-SVM:
+    ✓ Feature encoding in quantum circuit
+    ✗ Classification uses classical SVM
+    ✗ No trainable quantum parameters
+    ✗ Only kernel is quantum

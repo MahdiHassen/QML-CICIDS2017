@@ -1,0 +1,41 @@
+Comprehensive Model Comparison Results
+Q-SVM vs Classical SVM vs K-NN
+================================================================================
+
+Dataset Information:
+  Total samples: 33,776
+  Train/Test split: 75/25
+  Class balance: 50% Normal, 50% Attack
+
+Results by Feature Count:
+--------------------------------------------------------------------------------
+
+4 Features:
+  Q-SVM:    F1=0.8573, Acc=0.8376, Time=46.02s
+  SVM:      F1=0.8580, Acc=0.8387, Time=4.42s
+  K-NN:     F1=0.9232, Acc=0.9182, Time=0.10s
+  Features: Packet Length Mean, Packet Length Std, Packet Length Variance, Average Packet Size
+
+6 Features:
+  Q-SVM:    F1=0.9111, Acc=0.9064, Time=62.00s
+  SVM:      F1=0.9080, Acc=0.9032, Time=3.26s
+  K-NN:     F1=0.9558, Acc=0.9563, Time=0.10s
+  Features: Destination Port, Bwd Packet Length Mean, Packet Length Mean, Packet Length Std, Packet Length Variance, Average Packet Size
+
+8 Features:
+  Q-SVM:    F1=0.9115, Acc=0.9069, Time=81.77s
+  SVM:      F1=0.9109, Acc=0.9062, Time=3.14s
+  K-NN:     F1=0.9668, Acc=0.9660, Time=0.10s
+  Features: Destination Port, Bwd Packet Length Mean, Max Packet Length, Packet Length Mean, Packet Length Std, Packet Length Variance, Average Packet Size, Subflow Fwd Bytes
+
+12 Features:
+  Q-SVM:    F1=0.9232, Acc=0.9192, Time=179.47s
+  SVM:      F1=0.9361, Acc=0.9334, Time=3.00s
+  K-NN:     F1=0.9812, Acc=0.9809, Time=0.11s
+  Features: Destination Port, Total Length of Fwd Packets, Fwd Packet Length Max, Bwd Packet Length Max, Bwd Packet Length Mean, Max Packet Length, Packet Length Mean, Packet Length Std, Packet Length Variance, Average Packet Size, Subflow Fwd Bytes, Init_Win_bytes_forward
+
+
+Key Findings:
+--------------------------------------------------------------------------------
+Best Q-SVM: 12 features with F1=0.9232
+Q-SVM won 0/4 experiments
