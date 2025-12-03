@@ -1,0 +1,20 @@
+SVDD Results (MI-selected features)
+================================================================================
+
+4 Features:
+  Features: Packet Length Mean, Packet Length Std, Packet Length Variance, Average Packet Size
+  SVDD: F1=0.8742, Acc=0.8612, Train=0.92s
+
+6 Features:
+  Features: Destination Port, Bwd Packet Length Mean, Packet Length Mean, Packet Length Std, Packet Length Variance, Average Packet Size
+  SVDD: F1=0.8329, Acc=0.8295, Train=0.97s
+
+8 Features:
+  Features: Destination Port, Bwd Packet Length Max, Bwd Packet Length Mean, Max Packet Length, Packet Length Mean, Packet Length Std, Packet Length Variance, Average Packet Size
+  SVDD: F1=0.8309, Acc=0.8323, Train=0.97s
+
+12 Features:
+  Features: Destination Port, Total Length of Fwd Packets, Bwd Packet Length Max, Bwd Packet Length Mean, Max Packet Length, Packet Length Mean, Packet Length Std, Packet Length Variance, Average Packet Size, Subflow Fwd Bytes, Init_Win_bytes_forward, Init_Win_bytes_backward
+  SVDD: F1=0.8046, Acc=0.7880, Train=1.03s
+
+Best F1: 0.8742 @ 4 features

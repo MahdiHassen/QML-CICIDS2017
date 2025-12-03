@@ -40,7 +40,8 @@ def prepare_balanced_data():
     print("Loading dataset...")
     csv_path = download_cicids_cleaned()
     df = pd.read_csv(csv_path)
-
+    size = len(df)
+    print(f"Dataset loaded: {size} samples")
     X = df.drop("Attack Type", axis=1)
     y = (df["Attack Type"] != "Normal Traffic").astype(int)
 

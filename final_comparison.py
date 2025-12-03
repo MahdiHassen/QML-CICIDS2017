@@ -17,6 +17,8 @@ print("="*80)
 results = {
     'Classical SVM': {'f1': 0.9080, 'time': 3.26, 'type': 'classical'},
     'Classical K-NN': {'f1': 0.9648, 'time': 0.09, 'type': 'classical'},
+    'Classical SVDD': {'f1': 0.8740, 'time': 0.97, 'type': 'classical'},
+    'Fully Supervised QSVDD': {'f1': 0.6562, 'time': 84.3, 'type': 'full_quantum'},
     'Hybrid Q-SVM': {'f1': 0.9111, 'time': 62.0, 'type': 'hybrid'},
     'Hybrid Q-KNN': {'f1': 0.9642, 'time': 28.5, 'type': 'hybrid'},
     'Full Quantum VQC': {'f1': 0.6019, 'time': 547.3, 'type': 'full_quantum'}
@@ -167,6 +169,15 @@ with open('comparison/results/FINAL_RESULTS.txt', 'w') as f:
     f.write(f"   • F1-Score: 90.80%\n")
     f.write(f"   • Training Time: 3.26s\n")
     f.write(f"   • Solid baseline\n\n")
+    f.write("📊 CLASSICAL SVDD:\n")
+    f.write(f"   • F1-Score: 87.40%\n")
+    f.write(f"   • Training Time: 0.97s\n")
+    f.write(f"   • Underperforms compared to K-NN and SVM\n\n")
+
+    f.write("⚠️ FULLY SUPERVISED QSVDD:\n")
+    f.write(f"   • F1-Score: 65.62%\n")
+    f.write(f"   • Training Time: 84.3s\n")
+    f.write(f"   • Struggles despite supervision\n\n")
 
     f.write("⚠️ FULL QUANTUM VQC:\n")
     f.write(f"   • F1-Score: 60.19%\n")
@@ -182,6 +193,7 @@ with open('comparison/results/FINAL_RESULTS.txt', 'w') as f:
     f.write("3. Q-KNN achieves 96.42% F1 - nearly matching classical K-NN!\n")
     f.write("4. Full quantum VQC struggles in NISQ era (60% F1)\n")
     f.write("5. Quantum shows promise but needs better hardware (fault-tolerant QC)\n\n")
+    f.write("6. Fully supervised QSVDD struggles despite supervision (65.62% F1)\n\n")
 
     f.write("="*80 + "\n")
     f.write("Dataset: CICIDS2017 (Network Intrusion Detection)\n")
