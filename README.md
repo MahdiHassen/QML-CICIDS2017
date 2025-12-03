@@ -71,8 +71,8 @@ python comprehensive_f1_comparison.py
 | Q-KNN | Hybrid Quantum | 97.38% | 8 qubits |
 | Classical SVM | Classical | 93.61% | 12 features |
 | Q-SVM | Hybrid Quantum | 93.17% | 12 qubits |
-| SVDD | Classical | 87.40% | - |
-| Q-SVDD | Quantum | 67.50% | - |
+| SVDD | Classical | 87.40% | 4 features |
+| Q-SVDD | Quantum | 67.50% | 4 quibits |
 | VQC | Full Quantum | 60.19% | 4 qubits |
 
 ### SVDD Results
@@ -122,8 +122,8 @@ import matplotlib; print(f'matplotlib == {matplotlib.__version__}')
 
 | Task | Estimated Time |
 |------|----------------|
-| Classical Models (SVM + KNN) | ~5 seconds |
-| Hybrid Quantum Models (Q-SVM + Q-KNN) | ~2-5 minutes |
+| Classical Models (SVM + KNN + SVDD) | ~5 seconds |
+| Hybrid Quantum Models (Q-SVM + Q-KNN + Q-SVDD) | ~2-5 minutes |
 | Full Quantum VQC | ~10 minutes |
 | Circuit Diagram Generation | ~10 seconds |
 | **Total** | **~15 minutes** |
